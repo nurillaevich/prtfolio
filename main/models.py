@@ -36,6 +36,7 @@ class Portfolio(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='portfolios')
     category = models.ManyToManyField(Categories)
+    resume = models.FileField(upload_to='resume', null=True, blank=True)
 
     def __str__(self):
         return self.title
